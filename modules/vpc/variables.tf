@@ -1,9 +1,9 @@
 variable "vpc_cidr_block" {
-  description = "value"
+  description = "VPC CIDR range"
   type        = string
 }
 
 variable "name" {
-  description = "value"
+  description = "Name of your vpc"
   type        = string
 }

@@ -40,4 +40,3 @@ variable "vpc_id" {
 # variable "subnets" {}
 
 # variable "master_password" {}
-

@@ -27,7 +27,6 @@ resource "aws_rds_cluster_instance" "aurora_instances" {
   engine               = aws_rds_cluster.aurora_mysql.engine
   db_subnet_group_name = aws_db_subnet_group.subnet_group.name
   publicly_accessible  = false
-
 }
 
 resource "aws_security_group" "rds_sg" {
