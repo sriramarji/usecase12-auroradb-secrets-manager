@@ -33,3 +33,9 @@ variable "my-db_name" {
   type        = string
   default     = "test"
 }
+
+variable "ec2-name" {
+  description = "value"
+  type        = string
+  default     = "demo-test"
+}

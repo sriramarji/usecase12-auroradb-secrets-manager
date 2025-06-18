@@ -23,3 +23,13 @@ module "rds" {
 #  vpc_id                  = var.vpc_id
 #  subnets                 = var.subnets
 #  security_group_ids      = var.security_group_ids
+
+
+module "name" {
+
+  source = "./modules/ec2"
+
+  subnet_id = module.vpc.public_subnets[0]
+  ec2-name  = "demo-test"
+  vpc_id    = module.vpc.vpc_id
+}
