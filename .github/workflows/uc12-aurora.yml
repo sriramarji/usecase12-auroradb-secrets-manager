@@ -81,9 +81,9 @@ jobs:
       #   continue-on-error: true
 
       - name: Terraform Apply
-        if: github.event.inputs.action == 'apply'
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.action == 'apply'
         run: terraform apply -auto-approve 
 
       - name: Terraform Destroy
-        if: github.event.inputs.action == 'destroy'
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.action == 'destroy'
         run: terraform destroy -auto-approve
