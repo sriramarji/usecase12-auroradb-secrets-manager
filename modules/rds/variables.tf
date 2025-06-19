@@ -24,6 +24,12 @@ variable "vpc_id" {
   type        = string
 }
 
+
+variable "ec2_sg_id" {
+  description = "value"
+  type        = string
+}
+
 # variable "cluster_identifier" {
 #     description = "value"
 #     type = string 

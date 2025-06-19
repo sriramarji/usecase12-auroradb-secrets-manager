@@ -15,6 +15,7 @@ module "rds" {
   db_name           = var.my-db_name
   vpc_id            = module.vpc.vpc_id
   private_subnets   = module.vpc.private_subnets
+  ec2_sg_id         = module.ec2.web-sg_id
 }
 
 #  engine_version          = var.engine_version
@@ -25,7 +26,7 @@ module "rds" {
 #  security_group_ids      = var.security_group_ids
 
 
-module "name" {
+module "ec2" {
 
   source = "./modules/ec2"
 
